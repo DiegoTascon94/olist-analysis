@@ -56,6 +56,3 @@ El análisis revela un marketplace saludable pero con una dependencia marcada de
 * **Segmentación de Vendedores:** Implementar un modelo de clustering (K-Means) para clasificar a los vendedores por su nivel de cumplimiento y volumen.
 * **Análisis Geográfico:** Integrar datos de geolocalización para optimizar las rutas logísticas y reducir el *Freight Ratio*.
 * **Predicción de Ventas:** Desarrollar un modelo de series temporales para anticipar picos de demanda en categorías estacionales.
-
-      # Documentación profesional
-└── .gitignore                       # Archivos excluidos
