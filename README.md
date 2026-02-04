@@ -1,129 +1,61 @@
-# 📊 Análisis Comercial del Marketplace Brasileño (Olist)
+# 📊 Análisis Comercial y Eficiencia Operativa: Marketplace Olist (Brasil)
 
-**Data Analysis Project | E-commerce | Business Insights | Python**
+## 🎯 Contexto del Negocio
+Olist opera como un integrador logístico y comercial que conecta a miles de vendedores con los principales e-commerce de Brasil. En un ecosistema de marketplace de gran escala, el éxito no depende solo del volumen transaccional, sino de la **mezcla de categorías** y la **eficiencia logística**. La empresa enfrenta el reto de identificar qué productos realmente generan valor y cuáles están siendo erosionados por costos de envío elevados, impactando la sostenibilidad del modelo de negocio a largo plazo.
 
-Análisis exploratorio y estratégico del desempeño comercial de un marketplace de gran escala, enfocado en ingresos, precios y costos logísticos para apoyar la toma de decisiones basada en datos.
+## 🚀 Objetivo del Proyecto
+* **Evaluar el desempeño comercial** identificando las categorías que actúan como motores de ingresos.
+* **Analizar la estructura de precios** para determinar si el crecimiento es impulsado por volumen o por ticket promedio.
+* **Auditar el impacto logístico** calculando la relación costo de envío vs. precio de venta.
+* **Priorizar esfuerzos comerciales** mediante la identificación de segmentos estratégicos bajo el principio de Pareto.
 
----
+## 📊 Alcance del Análisis
+* **Nivel de análisis:** Transaccional por orden, producto y categoría.
+* **Datos incluidos:** +110,000 órdenes procesadas entre 2016 y 2018.
+* **Supuestos:** Se asume que el costo logístico registrado es el factor principal de fricción en la conversión de categorías de bajo ticket promedio.
 
-## 🧠 Contexto de Negocio
+## 💡 Principales Insights (EDA)
+* **Concentración de Ingresos (Pareto):** Se confirmó que el **20% de las categorías genera aproximadamente el 80% del ingreso total**, destacando *health_beauty*, *watches_gifts* y *bed_bath_table* como pilares financieros.
+* **Driver de Crecimiento:** El modelo de ingresos actual está apalancado en el **alto volumen de ventas** de productos de ticket medio, más que en la venta de artículos de lujo o high-end.
+* **Fuga de Rentabilidad:** Se detectaron categorías donde el costo logístico representa una proporción crítica del precio de venta, sugiriendo ineficiencias en la distribución geográfica o en el embalaje.
+* **Oportunidad de Portafolio:** Existe una alta dispersión de precios en categorías clave, lo que indica espacio para una estrategia de *upselling* dirigida.
 
-Olist es un marketplace brasileño que conecta a miles de vendedores con consumidores finales a través de múltiples categorías de productos.  
-En este tipo de plataformas, **comprender qué categorías y productos generan mayor valor económico —y cuáles presentan riesgos de rentabilidad— es crítico para optimizar la estrategia comercial y operativa**.
+## 🛠️ Enfoque Analítico y Modelo
+* **Análisis de Concentración:** Aplicación del Principio de Pareto para segmentar categorías "A" (estratégicas) de las "C" (marginales).
+* **Análisis de Dispersión:** Correlación entre volumen de pedidos y precio unitario para entender la elasticidad visual del catálogo.
+* **Métricas de Fricción Logística:** Creación de un ratio de costo de envío/precio para identificar categorías con márgenes en riesgo.
 
-Este proyecto analiza datos transaccionales reales con el objetivo de **identificar patrones de ingresos, concentración de ventas y oportunidades de optimización**.
+## 📈 Métricas y Resultados
+* **GMV (Gross Merchandise Volume):** Identificación total del valor transaccionado por periodo.
+* **Average Ticket:** Cálculo de la media transaccional por categoría para definir el perfil del consumidor.
+* **Freight Ratio:** Identificación de las 5 categorías con mayor costo logístico relativo, permitiendo focalizar renegociaciones con transportistas.
 
----
+## 🧠 Impacto en Decisiones de Negocio
+* **Optimización de Marketing:** Redirección del presupuesto publicitario hacia las categorías del "Top 20%" que aseguran el flujo de caja.
+* **Estrategia Logística:** Base de datos lista para que el equipo de Operaciones negocie tarifas planas o subsidios en categorías con *Freight Ratio* crítico.
+* **Gestión de Sellers:** Identificación de categorías subexplotadas donde se requieren captar nuevos vendedores para diversificar la oferta.
 
-## 🎯 Objetivo del Proyecto
-
-Evaluar el desempeño comercial del marketplace mediante el análisis de ingresos, volumen de ventas, precios y costos logísticos, con el fin de **identificar categorías y productos clave para la generación de valor**.
-
----
-
-## ❓ Preguntas de Negocio
-
-- ¿Qué categorías concentran la mayor parte de los ingresos del marketplace?
-- ¿El modelo de ingresos se basa principalmente en volumen de ventas o en precios altos?
-- ¿Qué categorías presentan un mayor impacto del costo logístico sobre el precio?
-- ¿Dónde existen oportunidades claras de optimización comercial y operativa?
-
----
-
-## 📦 Dataset
-
-- **Fuente:** Brazilian E-Commerce Public Dataset (Olist) – Kaggle  
-- **Periodo:** 2016 – 2018  
-- **Registros:** +110.000 órdenes  
-- **Tablas principales:** Orders, Order Items, Products, Customers, Category Translation  
-
----
-
-## 🔍 Alcance del Análisis
-
-**Incluye:**
-- Integración y preparación de datos transaccionales
-- Análisis de ingresos por categoría y producto
-- Evaluación precio vs volumen de ventas
-- Impacto del costo logístico en la rentabilidad
-- Análisis de concentración (Principio de Pareto 80/20)
-
-**Excluye:**
-- Modelos predictivos avanzados
-- Análisis financiero detallado por vendedor
-- Optimización logística a nivel operativo
-
----
-
-## 🧪 Metodología
-
-- Limpieza y validación de datos
-- Construcción de métricas de negocio (ingresos, volumen, precios, costos)
-- Análisis Exploratorio de Datos (EDA)
-- Visualización de insights orientados a negocio
-
----
-
-## 📈 Resultados Clave
-
-- Los ingresos del marketplace están **altamente concentrados en un número reducido de categorías**, como *health_beauty*, *watches_gifts* y *bed_bath_table*.
-- El modelo de ingresos está impulsado principalmente por **alto volumen de ventas**, más que por productos de alto precio.
-- Varias categorías presentan **costos logísticos elevados en relación con el precio**, lo que impacta negativamente la rentabilidad.
-- El 20% de las categorías genera aproximadamente el 80% del ingreso total, validando un patrón claro de concentración.
-
----
-
-## 💡 Recomendaciones de Negocio
-
-- Priorizar inversión y visibilidad en categorías core de alto impacto en ingresos.
-- Revisar estrategias de precios o logística en categorías con bajo margen potencial.
-- Optimizar el portafolio de productos enfocándose en alta rotación y rentabilidad sostenible.
-- Utilizar análisis Pareto como herramienta continua de priorización estratégica.
-
----
-
-## 🛠️ Herramientas y Tecnologías
-
-- **Lenguaje:** Python  
-- **Librerías:** Pandas, NumPy, Matplotlib, Seaborn  
-- **Entorno:** Jupyter Notebook, VS Code  
-- **Control de versiones:** Git & GitHub  
-
----
+## 💻 Tecnologías y Herramientas
+* **Lenguaje:** Python
+* **Librerías principales:** Pandas (Manipulación), NumPy (Cálculo), Matplotlib & Seaborn (Visualización).
+* **Entorno de trabajo:** Jupyter Notebook / VS Code.
 
 ## 📂 Estructura del Repositorio
+```text
+├── data/
+│   ├── olist_orders_dataset.csv     # Datos transaccionales
+│   ├── olist_products_dataset.csv   # Catálogo de productos
+│   └── category_name_translation.csv # Diccionario de categorías
+├── notebooks/
+```
 
+## 📝 Conclusiones
+El análisis revela un marketplace saludable pero con una dependencia marcada de categorías **core**. La rentabilidad no está solo en vender más, sino en equilibrar el costo logístico. Este proyecto demuestra que una visión orientada a datos permite separar el "ruido" del volumen transaccional de la "señal" de la rentabilidad real, permitiendo a Olist tomar decisiones de escalabilidad informadas.
 
+## 🔮 Próximos Pasos / Mejoras Futuras
+* **Segmentación de Vendedores:** Implementar un modelo de clustering (K-Means) para clasificar a los vendedores por su nivel de cumplimiento y volumen.
+* **Análisis Geográfico:** Integrar datos de geolocalización para optimizar las rutas logísticas y reducir el *Freight Ratio*.
+* **Predicción de Ventas:** Desarrollar un modelo de series temporales para anticipar picos de demanda en categorías estacionales.
 
-📂 Estructura del Repositorio
-olist_analysis/
-│
-├── data/          # Datasets utilizados
-├── notebooks/     # Notebook principal de análisis
-├── README.md      # Documentación del proyecto
-└── .gitignore
-
-
----
-
-## ▶️ Cómo Ejecutar el Proyecto
-
-1. Clonar el repositorio
-2. Instalar las dependencias necesarias
-3. Abrir el notebook principal en `notebooks/`
-4. Ejecutar las celdas en orden para reproducir el análisis
-
----
-
-## 👤 Autor
-
-**Diego Tascon**  
-Data Analyst Jr  
-
-- GitHub: https://github.com/DiegoTascon94  
-- LinkedIn: www.linkedin.com/in/diego-tascon
-
----
-
-
-Data Analyst, E-commerce Analytics, Exploratory Data Analysis, Business Intelligence, Python, Pandas, Data Visualization, Marketplace Analysis, Logistics Cost Analysis
+      # Documentación profesional
+└── .gitignore                       # Archivos excluidos
